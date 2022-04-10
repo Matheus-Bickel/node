@@ -20,7 +20,7 @@ describe('Suite de manipulação de herois', () => {
 
     before(async () => {
         await database.post(DEFAULT_ITEM_CADASTRAR)
-        await database.post(DEFAULT_ITEM_ATUALIZAR)
+        //await database.post(DEFAULT_ITEM_ATUALIZAR)
     })
     
     it('deve pesquisar um heroi usando arquivos', async () => {
@@ -44,7 +44,7 @@ describe('Suite de manipulação de herois', () => {
         deepEqual(result, expected)
     })
 
-    it.only('deve atualizar um heroi pelo id', async () => {
+    it('deve atualizar um heroi pelo id', async () => {
         const expected = {
             ...DEFAULT_ITEM_ATUALIZAR,
             name: 'Batman',
